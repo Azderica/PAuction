@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> PAuction BUY</title>
+    <style type="text/css">
+        @import url("stylesheets/buy.css");
+    </style>
+    <script>
+        var now_price;
+        var now_participant;
+
+        var timeout = [];
+        var now = new Date();
+        var item_date = new Date('2019-06-28T23:59:59');
+        //setTimeout("location.reload()", 1000)
+
+        function updateTime() {
+            var time_diff = item_date.getTime() - now.getTime();
+            time_diff = parseInt(time_diff / 1000);
+            timeout[0] = time_diff % 60;
+            time_diff -= time_diff % 60;
+            time_diff /= 60;
+            timeout[1] = time_diff % 60;
+            time_diff -= time_diff % 60;
+            time_diff /= 60;
+            timeout[2] = time_diff % 24;
+            time_diff -= time_diff % 24;
+            time_diff /= 24;
+            timeout[3] = time_diff;
+
+            for (var i = 0; i < timeout.length; i++) {
+                if (timeout[i] < 10)
+                    timeout[i] = '0' + timeout[i];
+            }
+            document.getElementById("buy_time_id1").textContent = ("TIME : " + timeout[3] + ":" + timeout[2] + ":" + timeout[1] + ":" + timeout[0]);
+            document.getElementById("buy_time_id2").textContent = ("TIME : " + timeout[3] + ":" + timeout[2] + ":" + timeout[1] + ":" + timeout[0]);
+        }
+
+        function updatePage() {
+            now_price = localStorage.getItem("PRICE");
+            now_participant = localStorage.getItem("PARTICIPANT");
+            if(now_price == NaN || now_price == "NaN" || now_price == null)
+                now_price = 0;
+            else
+                now_price = parseInt(now_price);
+            if(now_participant == NaN || now_participant == "NaN" || now_participant == null)
+                now_participant = 0;
+            else
+                now_participant = parseInt(now_participant);
+            document.getElementById("buy_price_id").textContent = ("\₩ " + now_price);
+            document.getElementById("buy_participant_id").textContent = ("PARTICIPANTS : " + now_participant);
+        }
+    </script>
+</head>
+
+<body>
+    <header class="head">
+        <div class="head_top">
+            HOMEPAGE AUCTION
+        </div>
+        <div class="head_bot">
+            <button class="head_bot_left" onclick="location.href='buy.html'">Buy</button>
+            <button class="head_bot_center" onclick="location.href='index.html'">HOME</button>
+            <button class="head_bot_right" onclick="location.href='design.html'">Design</button>
+        </div>
+    </header>
+    <div style="height: 130px"></div>
+    <div class="buy">
+        <div class="buy_name">Casual Homepage Example</div>
+        <div style="height: 20px"></div>
+        <div class="buy_time" id="buy_time_id1">TIME : 00:00:00:00</div>
+        <div style="height: 20px"></div>
+        <div class="buy_item">
+            <img src="images/sample3.jpg" width="60%">
+        </div>
+        <div style="height: 50px"></div>
+        <div class="buy_price" id="buy_price_id"> ₩ 0</div>
+        <div style="height: 10px"></div>
+        <div class="buy_participant" id="buy_participant_id">participants : 0</div>
+        <div style="height: 50px"></div>
+        <div class="buy_time" id="buy_time_id2">TIME : 00:00:00:00</div>
+        <div style="height: 20px"></div>
+        <div class="buy_button_area">
+            <button class="buy_button"
+                onclick="window.open('buy_item.html',' ', 'width=430,height=300,left=100,top=50');">purchase</button>
+        </div>
+    </div>
+    <script>
+        updateTime();
+        updatePage();
+        setTimeout("location.reload()", 1000);
+    </script>
+</body>
+
+</html>

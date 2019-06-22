@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> PAuction DESIGN ITEM</title>
+    <style type="text/css">
+        @import url("stylesheets/design_item.css");
+    </style>
+    <script>
+        function register_page() {
+            var user = document.getElementsByName('REGI_ID')[0].value;
+            var link = document.getElementsByName('REGI_LINK')[0].value;
+            localStorage.setItem("REGI_ID", user);
+            localStorage.setItem("REGI_LINK", link);
+            self.close();
+        }
+    </script>
+</head>
+
+<body>
+    <div style="height: 30px"></div>
+    <div class="top">
+        Register your homepage
+    </div>
+    <div style="height: 30px"></div>
+    <div class="line">
+        <span class="line_name">ID</span>
+        <input class="line_text" type="text" name="REGI_ID">
+    </div>
+    <div style="height: 20px"></div>
+    <div class="line">
+        <span class="line_name">Page link</span>
+        <input class="line_text" type="text" name="REGI_LINK">
+    </div>
+    <div style="height: 20px"></div>
+    <div class="line_button">
+        <button class="line_decision" onclick="register_page()">Register</button>
+    </div>
+</body>
+
+</html>

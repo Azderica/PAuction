@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> PAuction</title>
+    <style type="text/css">
+        @import url("stylesheets/index.css");
+    </style>
+    <script>
+        function updateAuction() {
+            var timeout = [];
+            var auction_date = new Date('2019-06-26T15:20:00');
+            timeout[0] = auction_date.getMonth() + 1;
+            timeout[1] = auction_date.getDate();
+            timeout[2] = auction_date.getHours();
+            timeout[3] = auction_date.getMinutes();
+            for (var i = 0; i < timeout.length; i++) {
+                if (timeout[i] < 10)
+                    timeout[i] = '0' + timeout[i];
+            }
+            document.getElementById("main2_month").textContent = timeout[0];
+            document.getElementById("main2_day").textContent = timeout[1];
+            document.getElementById("main2_hours").textContent = timeout[2];
+            document.getElementById("main2_minutes").textContent = timeout[3];
+        }
+    </script>
+</head>
+
+<body>
+    <header class="head">
+        <div class="head_top">
+            HOMEPAGE AUCTION
+        </div>
+        <div class="head_bot">
+            <button class="head_bot_left" onclick="location.href='buy.html'">Buy</button>
+            <button class="head_bot_center" onclick="location.href='index.html'">HOME</button>
+            <button class="head_bot_right" onclick="location.href='design.html'">Design</button>
+        </div>
+    </header>
+    <div class="blank"></div>
+    <div class="main1">
+        <img class="main1_bg_img" src="images/main1.jpg">
+        <div class="main1_article">
+            <div style="height: 30%"></div>
+            <div class="main1_comment">
+                Your Special Site
+            </div>
+            <div style="height: 5%"></div>
+            <div class="main1_name">
+                HomePage<br>AUCTION
+            </div>
+        </div>
+    </div>
+    <div class="main2">
+        <div style="height: 20%"></div>
+        <div class="main2_name"> NEW AUCTION STARTS AT </div>
+        <div style="height: 20%"></div>
+        <div class="main2_countdown">
+            <span class="main2_color_box">
+                <span class="main2_text_box" id="main2_month">00</span>
+                <span class="main2_about_box">Month</span>
+            </span>
+            <span class="main2_blank"> </span>
+            <span class="main2_color_box">
+                <span class="main2_text_box" id="main2_day">00</span>
+                <span class="main2_about_box">Day</span>
+            </span>
+            <span class="main2_blank"> </span>
+            <span class="main2_color_box">
+                <span class="main2_text_box" id="main2_hours">00</span>
+                <span class="main2_about_box">Hour</span>
+            </span>
+            <span class="main2_blank"> </span>
+            <span class="main2_color_box">
+                <span class="main2_text_box" id="main2_minutes">00</span>
+                <span class="main2_about_box">Minute</span>
+            </span>
+        </div>
+    </div>
+    <div class="main3">
+        <div style="height: 55px"></div>
+        <div class="main3_name">Currently Auctioned</div>
+        <div class="main3_floor">
+            <span class="main3_item">
+                <img src="images/sample1.jpg" width="100%">
+            </span>
+            <span class="main3_item">
+                <img src="images/sample2.jpg" width="100%">
+            </span>
+        </div>
+        <div class="main3_floor">
+            <span class="main3_item">
+                <img src="images/sample3.jpg" width="100%">
+            </span>
+            <span class="main3_item">
+                <img src="images/sample4.jpg" width="100%">
+            </span>
+        </div>
+    </div>
+    <div class="main4">
+        <div style="height: 20%"></div>
+        <div class="main4_name">REGISTERED AS A DESIGNER</div>
+        <div class="main4_comment">당신의 디자인을 판매하세요</div>
+        <div class="main4_button_area">
+            <button class="main4_button"> REGISTER </button>
+        </div>
+    </div>
+    <div class="main5">
+        <div style="height: 10px"></div>
+        <div class="main5_name">
+            PAuction
+        </div>
+        <div class="main5_comment">
+            This site was created for web programming projects. <br>
+            Kyungpook National University, <br>
+            2015117532 Park Myunghun.
+        </div>
+    </div>
+    <script>
+        updateAuction();
+    </script>
+</body>
+
+</html>

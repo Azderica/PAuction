@@ -1,0 +1,208 @@
+/*------------------- 초기화 선언 -------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------- 초기화 선언 -------------------*/
+
+body{
+    background-color: white;
+}
+
+.head{
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	display: inline-block;
+	position: fixed;
+	z-index: 100;
+}
+
+.blank{
+	display: black;
+	height: 55px;
+}
+
+.head_top{
+	height: 55px;
+	line-height: 55px;
+
+	font-family: Century Gothic;
+	font-size: 20px;
+	letter-spacing: 10px;
+
+	color : white;
+    background-color: #232323;
+}
+
+.head_bot{
+	height: 67px;
+	line-height: 67px;
+
+	align-items: center;
+	text-align: center;
+	letter-spacing: 5px;
+	
+	color : black;
+	background-color: white;
+	display: block;
+	
+	opacity: 0.7;	
+}
+
+.head_bot_left{
+	text-align: left;
+    letter-spacing: 5px;
+    background-color: black;
+	
+	border: none;
+	background-color: inherit;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+    cursor: pointer;
+    
+    font-weight: bold;
+}
+
+.head_bot_center{
+	text-align: center;
+	letter-spacing: 5px;
+
+	border: none;
+	background-color: inherit;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+	cursor: pointer;
+	
+}
+
+.head_bot_right{
+	text-align: right;
+	letter-spacing: 5px;
+
+	border: none;
+	background-color: inherit;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.buy{
+    text-align: center;
+}
+
+.buy_name{
+	font-family: Franklin Gothic;
+	font-weight: bold;
+	line-height: 90px;
+
+	display: block;
+
+	text-align: center;
+
+	font-size: 60px;
+	letter-spacing: 0px;
+}
+
+
+.buy_time{
+	text-align: center;
+	align-content: center;
+	font-family: Century Gothic;
+
+	line-height: 50px;
+	font-size: 30px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+
+}
+
+.buy_price{
+	text-align: center;
+	align-content: center;
+	font-family: Franklin Gothic;
+	font-weight: bold;
+
+	line-height: 55px;
+	font-size: 55px;
+	letter-spacing: 5px;
+}
+
+.buy_participant{
+	text-align: center;
+	align-content: center;
+	font-family: Franklin Gothic;
+
+	font-size: 14px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+
+}
+
+.buy_button_area{
+	height: 50%;
+	text-align: center;
+}
+
+.buy_button{
+	border: 3px solid #fff;
+	border-radius: 15px;
+	color: white;
+	background-color: #232323;
+	font-weight: bold;
+	font-size : 30px;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+	align-items: center;
+	cursor: pointer;	
+
+}

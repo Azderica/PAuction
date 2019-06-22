@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> PAuction BUY ITEM</title>
+    <style type="text/css">
+        @import url("stylesheets/buy_item.css");
+    </style>
+    <script>
+        function decision_page() {
+            var user = document.getElementsByName('ID')[0].value;
+            var price = document.getElementsByName('PRICE')[0].value;
+            var participant = localStorage.getItem('PARTICIPANT');
+            if (participant == NaN || participant == "NaN" || participant == null)
+                participant = 0;
+            else
+                participant = parseInt(participant);
+            //console.log(user + " " + price);
+            if (price > localStorage.getItem("PRICE")) {
+                localStorage.setItem("ID", user);
+                localStorage.setItem("PRICE", price);
+                participant += 1;
+                localStorage.setItem("PARTICIPANT", participant);
+            }
+            self.close();
+        }
+    </script>
+</head>
+
+<body>
+    <div style="height: 30px"></div>
+    <div class="top">
+        Biding your homepage
+    </div>
+    <div style="height: 30px"></div>
+    <div class="line">
+        <span class="line_name">ID</span>
+        <input class="line_text" type="text" name="ID">
+    </div>
+    <div style="height: 20px"></div>
+    <div class="line">
+        <span class="line_name">Bid Price</span>
+        <input class="line_text" type="text" name="PRICE">
+    </div>
+    <div style="height: 20px"></div>
+    <div class="line_button">
+        <button class="line_decision" onclick="decision_page()">Decision</button>
+    </div>
+</body>
+
+</html>

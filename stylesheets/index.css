@@ -1,0 +1,338 @@
+/*------------------- 초기화 선언 -------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------- 초기화 선언 -------------------*/
+
+body{
+	background-color: black;
+}
+
+
+.head{
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	display: inline-block;
+	position: fixed;
+	z-index: 100;
+}
+
+.blank{
+	display: black;
+	height: 55px;
+}
+
+.head_top{
+	height: 55px;
+	line-height: 55px;
+
+	font-family: Century Gothic;
+	font-size: 20px;
+	letter-spacing: 10px;
+
+	color : white;
+    background-color: #232323;
+}
+
+.head_bot{
+	height: 67px;
+	line-height: 67px;
+
+	align-items: center;
+	text-align: center;
+	letter-spacing: 5px;
+	
+	color : black;
+	background-color: white;
+	display: block;
+	
+	opacity: 0.7;	
+}
+
+.head_bot_left{
+	text-align: left;
+	letter-spacing: 5px;
+	
+	border: none;
+	background-color: inherit;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.head_bot_center{
+	text-align: center;
+	letter-spacing: 5px;
+
+	border: none;
+	background-color: inherit;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+	cursor: pointer;
+	
+    font-weight: bold;
+}
+
+.head_bot_right{
+	text-align: right;
+	letter-spacing: 5px;
+
+	border: none;
+	background-color: inherit;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.main1_bg_img{
+	width: 100%;
+	position: relative;
+	opacity: 0.9;	
+}
+
+.main1_article{
+	position: absolute;
+	left: 0%;
+	top: 55px;
+	width: 100%;	
+	height: 66vw;
+
+	text-transform: uppercase;
+	color : black;
+}
+
+.main1_comment{
+	font-family: Century Gothic;
+	line-height: 100px;
+	
+	display: block;
+	height: 10%;
+	text-align: center;
+
+	font-size: 25px;
+	letter-spacing: 7px;
+
+}
+.main1_name{
+	font-family: Franklin Gothic;
+	font-weight: bold;
+	line-height: 85px;
+
+	display: block;
+	height: 55%;
+
+	text-align: center;
+
+	font-size: 80px;
+	letter-spacing: 0px;
+
+}
+
+.main2{
+	width: 100%;
+	height: 60vw;
+	background-color: white;
+	color:black;
+}
+
+.main2_name{
+	height: 15%;
+	text-align: center;
+	align-content: center;
+	font-family: Franklin Gothic;
+	font-weight: bold;
+
+	line-height: 55px;
+	font-size: 60px;
+	letter-spacing: 5px;
+}
+
+.main2_countdown{
+	position: relative;
+	width: 100%;
+	height: 45%;
+	display: inline-block;
+	text-align: center;
+}
+
+.main2_blank{
+	width: 30px;
+	display: inline-block;
+}
+
+.main2_color_box{
+	width: 130px;
+	height: 130px;
+	background-color: black;
+	color: white;
+	display: inline-block;
+}
+
+.main2_text_box{
+    font-size: 80px;
+	height: 80px;
+    text-align: center;
+	display: block;
+}
+
+.main2_about_box{
+	font-size: 30px;
+	height: 30px;
+	text-align: center;
+	align-content: center;
+	display: block;
+}
+
+.main3{
+	width: 100%;
+	height: 150vw;
+}
+
+.main3_floor{
+	height: 65vw;
+	text-align: center;
+}
+
+.main3_item{
+	display: inline-block;
+	width: 35%;
+
+	padding: 30px;
+
+	cursor: pointer;
+}
+
+.main3_name{
+	height: 95px;
+	text-align: center;
+	align-content: center;
+	font-family: Franklin Gothic;
+	font-weight: bold;
+
+	line-height: 50px;
+	font-size: 45px;
+	letter-spacing: 5px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.main4{
+	width: 100%;
+	height: 60vw;
+	background: white;
+}
+
+.main4_name{
+	height: 10%;
+	text-align: center;
+	align-content: center;
+	font-family: Franklin Gothic;
+	font-weight: bold;
+
+	line-height: 55px;
+	font-size: 6vw;
+	letter-spacing: 5px;
+
+}
+
+.main4_comment{
+	height: 20%;
+	text-align: center;
+	align-content: center;
+	font-family: 윤고딕;
+	font-weight: bold;
+	line-height: 55px;
+	font-size: 20px;
+	letter-spacing: 15px;
+
+	color: #b2b2b2;
+}
+
+.main4_button_area{
+	height: 50%;
+	text-align: center;
+}
+
+.main4_button{
+	border: 3px solid #fff;
+	border-radius: 15px;
+	color: white;
+	background-color: #232323;
+	font-weight: bold;
+	font-size : 30px;
+	margin: 1em auto;
+	padding: 1em 3em;
+	text-transform: uppercase;
+	align-items: center;
+	cursor: pointer;	
+}
+
+.main5{
+	width: 100%;
+	height: 180px;
+
+	color: white;
+	text-align: center;
+	font-family: Century Gothic;
+}
+
+.main5_name{
+	height: 70px;
+	font-size: 50px;
+}
+
+.main5_comment{
+	height: 80px;
+	font-size: 15px;
+	line-height: 25px;
+}
